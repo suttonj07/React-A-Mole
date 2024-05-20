@@ -2,10 +2,11 @@ import {useEffect} from 'react'
 import moleImg from '../mole.png'
 
 const Mole = (props) => {
+
     useEffect(() => {
         let randSeconds = Math.ceil(Math.random() * 15000)
         let timer = setTimeout(() => {
-            props.setDisplayMole(false)
+            props.toggle(false)
         }, randSeconds)
         return () => clearTimeout(timer)
     })
